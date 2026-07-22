@@ -1,0 +1,60 @@
+{
+  "brand": "阿寂",
+  "title": "阿寂 - 一个热爱编程的学生",
+  "description": "一个热爱编程的学生",
+  "nav": {
+    "home": "首页",
+    "projects": "项目",
+    "links": "链接"
+  },
+  "hero": {
+    "welcome": "欢迎来到",
+    "title": "阿寂",
+    "subtitle": "个人主页",
+    "description": "一个热爱编程的学生"
+  },
+  "projects": {
+    "title": "精选项目",
+    "description": "探索我的精选项目",
+    "projects": [
+      {
+        "name": "Carpet Aji Addition",
+        "description": "一个Minecraft模组，为Fabric-Carpat提供了更多规则。"
+      },
+      {
+        "name": "Downmatica",
+        "description": "一个Minecraft模组，让您方便的从网络中下载原理图。"
+      }
+    ]
+  },
+  "links": {
+    "title": "相关链接",
+    "description": "探索更多资源",
+    "links": [
+      {
+        "name": "个人博客"
+      },
+      {
+        "name": "Maven仓库"
+      },
+      {
+        "name": "QQ交流群"
+      },
+      {
+        "name": "Bilibili"
+      },
+      {
+        "name": "GitHub"
+      },
+      {
+        "name": "GPG公钥"
+      },
+      {
+        "name": "Modrinth"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 阿寂，保留所有权利。"
+  }
+}
