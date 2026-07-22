@@ -134,17 +134,17 @@ const FeaturedContent = () => {
   const links = messages.links.links;
 
   const linkUrls = {
-    '个人博客': '#',
-    'Personal Blog': '#',
-    'Maven仓库': '#',
-    'Maven Repository': '#',
-    'QQ交流群': '#',
-    'QQ Group': '#',
-    'Bilibili': '#',
-    'GitHub': '#',
-    'GPG公钥': '#',
-    'GPG Key': '#',
-    'Modrinth': '#',
+    '个人博客': 'blog.ajitech.top',
+    'Personal Blog': 'blog.ajitech.top',
+    'Maven仓库': 'maven.ajitech.top',
+    'Maven Repository': 'maven.ajitech.top',
+    'QQ交流群': 'https://qm.qq.com/q/cku0sXDCzQ',
+    'QQ Group': 'https://qm.qq.com/q/cku0sXDCzQ',
+    'Bilibili': 'https://space.bilibili.com/1543357006',
+    'GitHub': 'https://github.com/aji110905',
+    'GPG公钥': 'https://github.com/aji110905.gpg',
+    'GPG Key': 'https://github.com/aji110905.gpg',
+    'Modrinth': 'https://modrinth.com/user/aji110905',
   };
 
   const linkIconIds = ['blog', 'warehouse', 'qq', 'bilibili', 'github', 'key', 'modrinth'];
@@ -188,7 +188,6 @@ const FeaturedContent = () => {
           {projects.map((project, index) => (
             <a
               key={project.name}
-              href="#"
               className="project-card group relative bg-dark-card border border-dark-card hover:border-accent/50 transition-all duration-500 overflow-hidden block"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
