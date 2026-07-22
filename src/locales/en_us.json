@@ -19,11 +19,11 @@
     "projects": [
       {
         "name": "Carpet Aji Addition",
-        "description": ""
+        "description": "A Minecraft mod. More rules are provided for Fabric-Carpat."
       },
       {
         "name": "Downmatica",
-        "description": ""
+        "description": "A Minecraft mod. It is convenient for you to download the schematic from the network."
       }
     ]
   },

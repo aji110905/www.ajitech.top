@@ -19,11 +19,11 @@
     "projects": [
       {
         "name": "Carpet Aji Addition",
-        "description": ""
+        "description": "一个Minecraft模组，为Fabric-Carpat提供了更多规则。"
       },
       {
         "name": "Downmatica",
-        "description": ""
+        "description": "一个Minecraft模组，让您方便的从网络中下载原理图。"
       }
     ]
   },
