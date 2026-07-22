@@ -1,0 +1,60 @@
+{
+  "brand": "aji",
+  "title": "aji - A student who loves programming",
+  "description": "A student who loves programming",
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "links": "Links"
+  },
+  "hero": {
+    "welcome": "Welcome to",
+    "title": "aji",
+    "subtitle": "Personal Homepage",
+    "description": "A student who loves programming"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Explore my featured projects",
+    "projects": [
+      {
+        "name": "Carpet Aji Addition",
+        "description": ""
+      },
+      {
+        "name": "Downmatica",
+        "description": ""
+      }
+    ]
+  },
+  "links": {
+    "title": "Related Links",
+    "description": "Explore more resources",
+    "links": [
+      {
+        "name": "Personal Blog"
+      },
+      {
+        "name": "Maven Repository"
+      },
+      {
+        "name": "QQ Group"
+      },
+      {
+        "name": "Bilibili"
+      },
+      {
+        "name": "GitHub"
+      },
+      {
+        "name": "GPG Key"
+      },
+      {
+        "name": "Modrinth"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 aji. All rights reserved."
+  }
+}

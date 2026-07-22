@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: #0a0a0f;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00d4ff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b8e6;
+}
+
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Modrinth icon styles */
+.modrinth-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.modrinth-icon svg path {
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+.group:hover .modrinth-icon svg path {
+  fill: #00d4ff;
+}
+
+.group:hover .modrinth-icon svg path[stroke="white"] {
+  stroke: #00d4ff;
+}
+
+/* FeaturedContent section background */
+.featured-content-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Animation initial states - GSAP will animate from these */
+.project-card {
+  opacity: 0;
+}
+
+.link-card {
+  opacity: 0;
+}
+
+[data-title-animate] {
+  opacity: 0;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Performance optimizations */
+.project-card,
+.link-card,
+[data-title-animate],
+.animate-mask,
+nav,
+button,
+a {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* GPU-accelerated animations */
+.side-rays-container canvas,
+.interactive-grid canvas {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Reduce layout thrashing */
+.project-card img {
+  contain: layout paint size;
+}
+
+/* Optimize text rendering */
+.text-text-primary,
+.text-text-secondary,
+.text-accent {
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lazy loading placeholder */
+img {
+  loading: lazy;
+}
