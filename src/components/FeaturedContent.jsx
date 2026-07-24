@@ -134,10 +134,10 @@ const FeaturedContent = () => {
   const links = messages.links.links;
 
   const linkUrls = {
-    '个人博客': 'blog.ajitech.top',
-    'Personal Blog': 'blog.ajitech.top',
-    'Maven仓库': 'maven.ajitech.top',
-    'Maven Repository': 'maven.ajitech.top',
+    '个人博客': 'https://blog.ajitech.top',
+    'Personal Blog': 'https://blog.ajitech.top',
+    'Maven仓库': 'https://maven.ajitech.top',
+    'Maven Repository': 'https://maven.ajitech.top',
     'QQ交流群': 'https://qm.qq.com/q/cku0sXDCzQ',
     'QQ Group': 'https://qm.qq.com/q/cku0sXDCzQ',
     'Bilibili': 'https://space.bilibili.com/1543357006',
