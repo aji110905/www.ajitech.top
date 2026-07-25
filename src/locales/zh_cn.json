@@ -1,7 +1,7 @@
 {
   "brand": "阿寂",
-  "title": "阿寂 - 一个热爱编程的学生",
-  "description": "一个热爱编程的学生",
+  "title": "阿寂 - 一个热爱代码的开发者",
+  "description": "一个热爱代码的开发者",
   "nav": {
     "home": "首页",
     "projects": "项目",
@@ -11,7 +11,7 @@
     "welcome": "欢迎来到",
     "title": "阿寂",
     "subtitle": "个人主页",
-    "description": "一个热爱编程的学生"
+    "description": "一个热爱代码的开发者"
   },
   "projects": {
     "title": "精选项目",
