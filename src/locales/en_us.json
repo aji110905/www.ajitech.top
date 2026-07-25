@@ -1,7 +1,7 @@
 {
   "brand": "aji",
-  "title": "aji - A student who loves programming",
-  "description": "A student who loves programming",
+  "title": "aji - A developer who loves code",
+  "description": "A developer who loves code",
   "nav": {
     "home": "Home",
     "projects": "Projects",
@@ -11,7 +11,7 @@
     "welcome": "Welcome to",
     "title": "aji",
     "subtitle": "Personal Homepage",
-    "description": "A student who loves programming"
+    "description": "A developer who loves code"
   },
   "projects": {
     "title": "Featured Projects",
