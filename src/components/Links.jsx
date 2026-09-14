@@ -1,46 +1,9 @@
 import { useLang } from '../context/LanguageContext';
-import carpetAjiAddition from '../assets/carpet-aji-addition.png';
-import downmatica from '../assets/downmatica.png';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const useProjectCardAnimation = () => {
-  const cardsRef = useRef(null);
-
-  useEffect(() => {
-    const cards = cardsRef.current?.querySelectorAll('.project-card');
-    if (!cards) return;
-
-    gsap.set(cards, {
-      opacity: 0,
-      x: -40,
-    });
-
-    const trigger = ScrollTrigger.create({
-      trigger: cardsRef.current,
-      start: 'top 85%',
-      triggerOnce: true,
-      onEnter: () => {
-        gsap.to(cards, {
-          opacity: 1,
-          x: 0,
-          duration: 0.9,
-          stagger: 0.2,
-          ease: 'power3.out',
-        });
-      },
-    });
-
-    return () => {
-      trigger.kill();
-    };
-  }, []);
-
-  return { cardsRef };
-};
 
 const useLinkCardAnimation = () => {
   const linksRef = useRef(null);
@@ -109,8 +72,6 @@ const useSectionTitleAnimation = () => {
   return { titleRef };
 };
 
-const projectIcons = [carpetAjiAddition, downmatica];
-
 const getIconPath = (iconId) => {
   const paths = {
     blog: 'M288 88C288 74.7 298.7 64 312 64C457.8 64 576 182.2 576 328C576 341.3 565.3 352 552 352C538.7 352 528 341.3 528 328C528 208.7 431.3 112 312 112C298.7 112 288 101.3 288 88zM144 160C170.5 160 192 181.5 192 208L192 432C192 458.5 213.5 480 240 480C266.5 480 288 458.5 288 432C288 405.5 266.5 384 240 384C231.2 384 224 376.8 224 368L224 304C224 295.2 231.2 288 240 288C319.5 288 384 352.5 384 432C384 511.5 319.5 576 240 576C160.5 576 96 511.5 96 432L96 208C96 181.5 117.5 160 144 160zM312 160C404.8 160 480 235.2 480 328C480 341.3 469.3 352 456 352C442.7 352 432 341.3 432 328C432 261.7 378.3 208 312 208C298.7 208 288 197.3 288 184C288 170.7 298.7 160 312 160z',
@@ -123,14 +84,11 @@ const getIconPath = (iconId) => {
   return paths[iconId] || '';
 };
 
-const FeaturedContent = () => {
+const Links = () => {
   const { messages } = useLang();
-  const { cardsRef: projectCardsRef } = useProjectCardAnimation();
   const { linksRef } = useLinkCardAnimation();
-  const { titleRef: projectsTitleRef } = useSectionTitleAnimation();
   const { titleRef: linksTitleRef } = useSectionTitleAnimation();
 
-  const projects = messages.projects.projects;
   const links = messages.links.links;
 
   const linkUrls = {
@@ -150,64 +108,11 @@ const FeaturedContent = () => {
   const linkIconIds = ['blog', 'warehouse', 'qq', 'bilibili', 'github', 'key', 'modrinth'];
 
   return (
-    <section id="projects" className="py-32 relative overflow-hidden featured-content-section">
+    <section id="links" className="pt-24 pb-32 relative overflow-hidden featured-content-section">
       {/* 背景渐变层 */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-surface via-dark-surface to-dark-surface" />
 
       <div className="max-w-container mx-auto px-8 relative z-10">
-        {/* 项目标题区域 */}
-        <div ref={projectsTitleRef} className="text-center mb-20">
-          <span
-            data-title-animate
-            className="inline-block px-4 py-2 border border-accent/50 text-accent text-sm uppercase tracking-[0.3em] mb-6"
-          >
-            Portfolio
-          </span>
-          <h2
-            data-title-animate
-            className="text-5xl font-bold text-text-primary mb-6"
-          >
-            {messages.projects.title}
-          </h2>
-          <p
-            data-title-animate
-            className="text-xl text-text-secondary max-w-xl mx-auto"
-          >
-            {messages.projects.description}
-          </p>
-        </div>
-
-        {/* 项目卡片区域 */}
-        <div ref={projectCardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          {projects.map((project, index) => (
-            <a
-              key={index}
-              className="project-card group relative bg-dark-card border border-dark-card hover:border-accent/50 transition-all duration-500 overflow-hidden block"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="p-8 relative z-10">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-24 h-24 bg-dark-bg rounded-lg overflow-hidden border border-accent/30 group-hover:border-accent transition-colors duration-300">
-                    <img src={projectIcons[index]} alt={project.name} className="w-full h-full object-contain" />
-                  </div>
-
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-accent transition-colors duration-300">
-                      {project.name}
-                    </h3>
-                    <p className="text-text-secondary leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-            </a>
-          ))}
-        </div>
-
         {/* 链接标题区域 */}
         <div ref={linksTitleRef} className="text-center mb-16">
           <span
@@ -231,7 +136,7 @@ const FeaturedContent = () => {
         </div>
 
         {/* 链接卡片区域 */}
-        <div id="links" ref={linksRef}>
+        <div ref={linksRef}>
           <div className="flex flex-wrap justify-center gap-8">
             {links.map((link, index) => {
               const iconId = linkIconIds[index];
@@ -305,4 +210,4 @@ const FeaturedContent = () => {
   );
 };
 
-export default FeaturedContent;
+export default Links;

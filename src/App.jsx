@@ -23,7 +23,8 @@ const useDocumentTitle = (title, description) => {
   }, [title, description])
 }
 
-const FeaturedContent = lazy(() => import('./components/FeaturedContent'))
+const Projects = lazy(() => import('./components/Projects'))
+const Links = lazy(() => import('./components/Links'))
 const Donate = lazy(() => import('./components/Donate'))
 const Footer = lazy(() => import('./components/Footer'))
 
@@ -37,7 +38,8 @@ function AppContent() {
       <Suspense fallback={null}>
         <main>
           <Hero />
-          <FeaturedContent />
+          <Projects />
+          <Links />
           <Donate />
         </main>
         <Footer />
