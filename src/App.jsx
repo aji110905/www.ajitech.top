@@ -1,4 +1,4 @@
-import { lazy, useEffect } from 'react'
+import { lazy, useEffect, Suspense } from 'react'
 import { LanguageProvider, useLang } from './context/LanguageContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -24,6 +24,7 @@ const useDocumentTitle = (title, description) => {
 }
 
 const FeaturedContent = lazy(() => import('./components/FeaturedContent'))
+const Donate = lazy(() => import('./components/Donate'))
 const Footer = lazy(() => import('./components/Footer'))
 
 function AppContent() {
@@ -33,11 +34,14 @@ function AppContent() {
   return (
     <div>
       <Navbar />
-      <main>
-        <Hero />
-        <FeaturedContent />
-      </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <main>
+          <Hero />
+          <FeaturedContent />
+          <Donate />
+        </main>
+        <Footer />
+      </Suspense>
     </div>
   )
 }

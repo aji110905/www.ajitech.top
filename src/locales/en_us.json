@@ -5,7 +5,8 @@
   "nav": {
     "home": "Home",
     "projects": "Projects",
-    "links": "Links"
+    "links": "Links",
+    "donate": "Donate"
   },
   "hero": {
     "welcome": "Welcome to",
@@ -53,6 +54,19 @@
         "name": "Modrinth"
       }
     ]
+  },
+  "donate": {
+    "badge": "Support",
+    "title": "Support My Work",
+    "description": "If my open-source projects have helped you, feel free to scan a code and buy me a coffee ☕ — it keeps me creating.",
+    "alipay": "Alipay",
+    "wechat": "WeChat Pay",
+    "scanHint": "Scan with the app",
+    "clickHint": "Click to enlarge",
+    "modalScan": "Open {channel} and scan the QR code to send a tip",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimer": "Tips are voluntary and gratuitous gifts from users. They do not constitute any form of transaction or purchase of services, and tip amounts are non-refundable. Please tip rationally and of your own free will.",
+    "close": "Close"
   },
   "footer": {
     "copyright": "© 2026 aji. All rights reserved."
