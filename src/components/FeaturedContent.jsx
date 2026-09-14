@@ -154,12 +154,6 @@ const FeaturedContent = () => {
       {/* 背景渐变层 */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-surface via-dark-surface to-dark-surface" />
 
-      {/* 右下角光晕效果 */}
-      <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-accent/10 via-transparent to-transparent rounded-full blur-[120px]" />
-
-      {/* 左上角紫色光晕 */}
-      <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-gradient-radial from-purple-500/15 via-transparent to-transparent rounded-full blur-[100px]" />
-
       <div className="max-w-container mx-auto px-8 relative z-10">
         {/* 项目标题区域 */}
         <div ref={projectsTitleRef} className="text-center mb-20">

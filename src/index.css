@@ -68,10 +68,6 @@ body {
   overflow: hidden;
 }
 
-.bg-gradient-radial {
-  background: radial-gradient(circle, var(--tw-gradient-stops));
-}
-
 /* Animation initial states - GSAP will animate from these */
 .project-card {
   opacity: 0;
