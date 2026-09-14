@@ -187,7 +187,7 @@ const FeaturedContent = () => {
         <div ref={projectCardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {projects.map((project, index) => (
             <a
-              key={project.name}
+              key={index}
               className="project-card group relative bg-dark-card border border-dark-card hover:border-accent/50 transition-all duration-500 overflow-hidden block"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -245,7 +245,7 @@ const FeaturedContent = () => {
               if (iconId === 'modrinth') {
                 return (
                   <a
-                    key={link.name}
+                    key={index}
                     href={linkUrls[link.name]}
                     className="link-card group flex flex-col items-center justify-center gap-4 p-6 bg-dark-card border border-dark-card hover:border-accent/50 transition-all duration-500 w-50 h-50 overflow-hidden flex-shrink-0"
                   >
@@ -289,7 +289,7 @@ const FeaturedContent = () => {
 
               return (
                 <a
-                  key={link.name}
+                  key={index}
                   href={linkUrls[link.name]}
                   className="link-card group flex flex-col items-center justify-center gap-4 p-6 bg-dark-card border border-dark-card hover:border-accent/50 transition-all duration-500 w-50 h-50 overflow-hidden flex-shrink-0"
                 >
