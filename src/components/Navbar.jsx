@@ -69,6 +69,7 @@ const Navbar = () => {
     { key: 'home', href: '#home' },
     { key: 'projects', href: '#projects' },
     { key: 'links', href: '#links' },
+    { key: 'donate', href: '#donate' },
   ];
 
   const currentLang = languages.find((l) => l.code === lang);
