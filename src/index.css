@@ -14,6 +14,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 原生锚点定位时为固定导航栏预留偏移（JS 不可用时的纯 CSS 兜底方案） */
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
   -webkit-font-smoothing: antialiased;
